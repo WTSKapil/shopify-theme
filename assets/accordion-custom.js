@@ -1,5 +1,5 @@
 import { mediaQueryLarge, isMobileBreakpoint } from '@theme/utilities';
-
+// Comnt added
 // Accordion
 // Still extends HTMLElement over Component so that refs are still available to parent components (e.g. SortingFilterComponent)
 class AccordionCustom extends HTMLElement {
