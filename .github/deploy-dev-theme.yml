@@ -1,9 +1,9 @@
-name: Deploy Live Theme
+name: Deploy Dev Theme
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   deploy:
@@ -16,10 +16,9 @@ jobs:
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli @shopify/theme
 
-      - name: Deploy to Live Theme
+      - name: Deploy Theme
         run: |
           shopify theme push \
             --store ${{ secrets.SHOPIFY_STORE }} \
             --password ${{ secrets.SHOPIFY_THEME_PASSWORD }} \
-            --theme ${{ secrets.SHOPIFY_LIVE_THEME_ID }} \
-            --allow-live
+            --theme ${{ secrets.SHOPIFY_DEV_THEME_ID }}
