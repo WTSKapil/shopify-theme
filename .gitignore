@@ -1,4 +1,5 @@
 node_modules
 .env
 .DS_Store
+.github/workflows/deploy-dev-theme.yml
 .github/workflows/main.yml
